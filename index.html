@@ -104,10 +104,12 @@
         .btn-primary {
             background: var(--primary-dark);
             color: white;
+            border: 1.5px solid var(--primary-dark);
         }
         
         .btn-primary:hover {
             background: var(--primary-blue);
+            border-color: var(--primary-blue);
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0,31,63,0.25);
         }
@@ -135,7 +137,7 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
             position: relative;
             overflow: hidden;
             min-height: 85vh;
@@ -194,6 +196,7 @@
             font-weight: 700;
             font-style: italic;
             color: var(--primary-dark);
+            text-align: left;
         }
         
         .hero p {

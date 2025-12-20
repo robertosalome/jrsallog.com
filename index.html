@@ -344,24 +344,47 @@
             margin-top: 3rem;
         }
         
-        .testimonial {
-            background-color: var(--bg-light);
-            padding: 2rem;
-            border-radius: 15px;
-            border-top: 3px solid var(--primary-dark);
+        .testimonials-container {
+            text-align: center;
         }
         
-        .testimonial p {
+        .testimonial {
+            background-color: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 3px solid var(--primary-dark);
+            text-align: left;
+        }
+        
+        .testimonial-quote {
+            font-family: Playfair Display, serif;
+            font-size: 3rem;
+            color: #d0d0d0;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
             line-height: 1.8;
             font-style: italic;
+            font-size: 0.95rem;
         }
         
         .testimonial-author {
             font-weight: 600;
             color: var(--primary-dark);
             font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .testimonial-role {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
         
         /* CTA Section */
@@ -548,20 +571,28 @@
     
     <!-- Testimonials Section -->
     <section class="testimonials" id="depoimentos">
-        <div class="section-title">O Que Meus Mentees Dizem</div>
-        <div class="section-subtitle">Histórias reais de transformação e crescimento</div>
-        <div class="testimonials-grid">
-            <div class="testimonial">
-                <p>"A mentoria com Roberto transformou a forma como eu lido com conflitos em minha equipe. Seus insights sobre psicologia organizacional foram revolucionários."</p>
-                <div class="testimonial-author">— CEO, Empresa de Tecnologia</div>
-            </div>
-            <div class="testimonial">
-                <p>"Não é apenas consultoria. É uma parceria genuína com alguém que realmente entende os desafios de ser um líder executivo."</p>
-                <div class="testimonial-author">— Diretor Geral, Indústria</div>
-            </div>
-            <div class="testimonial">
-                <p>"Roberto me ajudou a navegar uma transição de carreira crítica. Sua experiência foi inestimável."</p>
-                <div class="testimonial-author">— VP de Operações, Multinacional</div>
+        <div class="testimonials-container">
+            <div class="section-title">O Que Dizem Sobre Mim</div>
+            <div class="section-subtitle">Relatos de quem já trabalhou e conviveu comigo.</div>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Jose Roberto es un excelente profesional y persona. Trabajamos juntos en el start-up de la operación mas compleja de ese momento, la tercerizacion logistica de las plantas de GM en Brasil y Argentina, simultaneamente con el start-up de la nueva planta de GM en la Provincia de Santa Fe, manejando esos procesos con mucha eficiencia."</p>
+                    <div class="testimonial-author">Nicolas Matienzo</div>
+                    <div class="testimonial-role">PARTNER AT INTERSEARCH ARGENTINA</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Roberto is one of the very best among all people I've ever worked with. He was well respected in our department and everyone appreciated working with him. Roberto assumed a leadership role in Sysytem, inspiring and motivating his colleagues. He was always able to successfully complete any tasks with favorable results despite deadline pressure."</p>
+                    <div class="testimonial-author">Kimberly Garrett</div>
+                    <div class="testimonial-role">SR. PROGRAM MANAGER AT FLEXE</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Era notória sua habilidade para estabelecer confiança, engajar a equipe, reunir todos em torno de um objetivo comum, falar de temas dificeis mas de maneira simples, respeitosa e algumas vezes corajosa fui 2018 reencontrei Roberto com a maturidade que o tempo nos dá e mais ainda fortalecido como lider."</p>
+                    <div class="testimonial-author">Iara Guimarães</div>
+                    <div class="testimonial-role">FOUNDER NAIA | CAREER CONSULTANT</div>
+                </div>
             </div>
         </div>
     </section>

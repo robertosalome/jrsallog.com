@@ -388,33 +388,165 @@
         }
         
         /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #003d66 100%);
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
+        /* Contact Section */
+        .contact {
+            background-color: var(--bg-light);
         }
         
-        .cta h2 {
-            font-family: 'Playfair Display', serif;
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: stretch;
+        }
+        
+        .contact-left {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #003d66 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .contact-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
         
-        .cta p {
-            font-size: 1.1rem;
+        .contact-left h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .contact-left p {
+            font-size: 0.95rem;
+            line-height: 1.8;
             margin-bottom: 2rem;
             opacity: 0.95;
         }
         
-        .cta .btn-cta {
+        .btn-schedule {
             background-color: white;
             color: var(--primary-dark);
-            font-weight: 700;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
         }
         
-        .cta .btn-cta:hover {
+        .btn-schedule:hover {
             background-color: var(--bg-light);
+            transform: translateY(-2px);
+        }
+        
+        .contact-note {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin: 0;
+        }
+        
+        .contact-right {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .contact-right h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid #d0d0d0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .btn-submit {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .btn-submit:hover {
+            background-color: #003d66;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
         }
         
         /* Footer */
@@ -597,11 +729,51 @@
         </div>
     </section>
     
-    <!-- CTA Section -->
-    <section class="cta" id="contato">
-        <h2>Pronto para Transformar Sua Liderança?</h2>
-        <p>Agende uma conversa inicial sem compromisso. Vamos explorar como posso ajudá-lo.</p>
-        <button class="btn-cta" onclick="window.location.href='mailto:roberto.salome@jrsallog.com'">Enviar Email</button>
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="contact-intro">
+            <p>Escolha a melhor forma de iniciarmos este dialogo. Sem compromisso, apenas uma conversa sobre seu futuro.</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-left">
+                <div class="contact-icon">📅</div>
+                <h3>Agendamento Direto</h3>
+                <p>Acesse minha agenda e escolha o melhor horario para uma conversa inicial de 30 minutos. Vamos nos conhecer e entender seus desafios.</p>
+                <button class="btn-schedule">Ver Horarios Disponiveis</button>
+                <p class="contact-note">* Integracao segura via Google Calendar</p>
+            </div>
+            
+            <div class="contact-right">
+                <h3>Envie uma mensagem</h3>
+                <p class="form-subtitle">Prefere escrever? Preencha o formulario abaixo e retornarei o contato.</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Seu nome" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone / WhatsApp</label>
+                            <input type="tel" placeholder="(11) 99999-9999" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Como posso ajudar?</label>
+                        <textarea placeholder="Conte um pouco sobre seu momento profissional..." rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
     </section>
     
     <!-- Footer -->

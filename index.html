@@ -109,18 +109,33 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, rgba(0, 31, 63, 0.05) 0%, rgba(0, 102, 204, 0.05) 100%);
-            min-height: 60vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 4rem 2rem;
             text-align: center;
             position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-watermark {
+            position: absolute;
+            right: -10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 600px;
+            height: 600px;
+            opacity: 0.15;
+            object-fit: cover;
+            z-index: 0;
         }
         
         .hero-content {
             max-width: 1000px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         
         .hero h1 {
@@ -584,6 +599,7 @@
     
     <!-- Hero Section -->
     <section class="hero">
+        <img src="mentor-watermark.jpg" alt="Mentor" class="hero-watermark">
         <div class="hero-content">
             <h1>Liderança consciente e personalizada na prática!</h1>
         </div>

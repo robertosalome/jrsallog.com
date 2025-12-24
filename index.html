@@ -792,6 +792,85 @@
     <footer>
         <p>&copy; 2025 JR LOG - Mentoria Executiva Transformadora. Todos os direitos reservados.</p>
         <p>José Roberto Alves Salome | <a href="mailto:roberto.salome@jrsallog.com" style="color: white; text-decoration: none;">roberto.salome@jrsallog.com</a></p>
-    </footer>
-</body>
-</html>
+        }
+        
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .header-container {
+                padding: 0 1.5rem;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .about-content {
+                gap: 3rem;
+            }
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-watermark {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .about-image {
+                margin: 0 auto;
+            }
+
+            .methodology-grid,
+            .process-steps,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-left,
+            .contact-right {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container"></div>

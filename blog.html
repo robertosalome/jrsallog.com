@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | JR LOG - Mentoria Executiva</title>
+    <meta name="description" content="Blog de mentoria executiva com artigos sobre liderança, burnout e desenvolvimento de líderes C-Level.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #001f3f;
+            --primary-blue: #0066cc;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--bg-white);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .btn-cta {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-cta:hover {
+            background-color: var(--primary-blue);
+        }
+        
+        /* Blog Section */
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .blog-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .blog-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .blog-card {
+            background-color: var(--bg-light);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 31, 63, 0.1);
+        }
+        
+        .blog-card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: var(--primary-dark);
+        }
+        
+        .blog-card-content {
+            padding: 2rem;
+        }
+        
+        .blog-card-date {
+            font-size: 0.85rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .blog-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .blog-card-link {
+            display: inline-block;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-card-link:hover {
+            color: var(--primary-dark);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-posts {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="jrlog_logo.png" alt="JR LOG">
+            </a>
+            <nav>
+                <a href="/#sobre">Sobre</a>
+                <a href="/#metodologia">Metodologia</a>
+                <a href="/#processo">Processo</a>
+                <a href="/#depoimentos">Depoimentos</a>
+                <a href="/blog.html">Blog</a>
+                <a href="https://www.linkedin.com/in/salome-jose-roberto01/" target="_blank">LinkedIn</a>
+                <button class="btn-cta" onclick="alert('Redirecionando para agendamento...')">Agendar Conversa</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Main Page -->
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Blog JR LOG</h1>
+            <p>Insights estratégicos sobre liderança, desenvolvimento executivo e transformação organizacional</p>
+        </div>
+
+        <div class="blog-posts">
+            <!-- Artigo 1: Burnout -->
+            <div class="blog-card" onclick="window.location.href='/blog-burnout.html'">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #001f3f 0%, #0066cc 100%);"></div>
+                <div class="blog-card-content">
+                    <div class="blog-card-date">24 de dezembro de 2025</div>
+                    <h3>Burnout no C-Level: Por Que a Cultura de "Sempre Ativo" é um Risco</h3>
+                    <p>Descubra como o burnout executivo ameaça a sustentabilidade da liderança e aprenda estratégias práticas para construir uma cultura de liderança sustentável.</p>
+                    <a href="/blog-burnout.html" class="blog-card-link">Ler Artigo →</a>
+                </div>
+            </div>
+
+            <!-- Placeholder para próximos artigos -->
+            <div class="blog-card" style="opacity: 0.5;">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #666666 0%, #999999 100%);"></div>
+                <div class="blog-card-content">
+                    <div class="blog-card-date">Em breve</div>
+                    <h3>O Paradoxo do CEO: Como a IA Pode Financiar o Desenvolvimento de Talentos</h3>
+                    <p>Explore como usar os ganhos de produtividade da IA para financiar o upskilling da força de trabalho.</p>
+                    <a href="#" class="blog-card-link" style="color: #999;">Em breve →</a>
+                </div>
+            </div>
+
+            <div class="blog-card" style="opacity: 0.5;">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #666666 0%, #999999 100%);"></div>
+                <div class="blog-card-content">
+                    <div class="blog-card-date">Em breve</div>
+                    <h3>Liderança com Influência: Construindo sua Marca Pessoal no Cenário Digital</h3>
+                    <p>Aprenda a desenvolver uma estratégia de marca pessoal autêntica e estratégica para líderes C-Level.</p>
+                    <a href="#" class="blog-card-link" style="color: #999;">Em breve →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 JR LOG - Mentoria Executiva Transformadora</p>
+        <p>Desenvolvido com propósito de transformar desafios em oportunidades de crescimento real</p>
+    </footer>
+</body>
+</html>
